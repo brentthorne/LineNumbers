@@ -1,0 +1,118 @@
+.page {
+  width: 8.5in;
+  height: 18in;
+  font-size: 1em;
+  background-color: lightblue;
+  line-height: 1;
+  text-align: justify;
+}
+.main {
+  position: absolute;
+  background-color: transparent;
+  margin-left: 0.38in;
+  width: 8.12in;
+  height: inherit;
+  counter-reset: figcap;
+}
+.margin {
+  counter-reset: lineNumbers;
+  position: absolute;
+  background-color: red;
+  height: inherit;
+  width: 0.3in;
+  margin-left: 0;
+  text-align: right;
+}
+body {
+  counter-reset: section;
+}
+h1 {
+  counter-reset: subsection;
+}
+h2 {
+  counter-reset: subsubsection;
+}
+h1::before {
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) ". ";
+}
+h3::before {
+  counter-increment: subsubsection;
+  content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
+}
+h1, h2, h3, .margin_H1, .margin_H2, .margin_H3 {
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+h2 {
+  font-weight: normal;
+  font-style: italic;
+}
+h3 {
+  font-weight: normal;
+}
+p, .margin_P {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.main p {
+  text-indent: 30px;
+}
+.margin span::before {
+  counter-increment: lineNumbers;
+  content: counter(lineNumbers);
+}
+p.caption {
+  font-size: 0.8em;
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 50%;
+  width: auto;
+  margin: auto;
+  text-align: justify;
+}
+p.caption::before {
+  counter-increment: figcap;
+  content: "Figure " counter(figcap) ". ";
+  font-weight: bold;
+}
+.margin_DIV {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+   width: auto;
+   margin: auto;
+   margin-bottom: 0.5em;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+  font-size: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.page {
+  counter-reset: tabcap;
+}
+caption::before {
+  counter-increment: tabcap;
+  content: "Table " counter(tabcap) ". ";
+  font-weight: bold;
+}
