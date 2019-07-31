@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 //add lineNum class to all desired elements
 $("h1").addClass("lineNum");
 $("h2").addClass("lineNum");
@@ -70,4 +72,6 @@ $(".margin_TABLE").each(function(i, obj) {
 	var getTabNumber = "table.table"+i;
   var tabHeight = $(getTabNumber).css("height");
   $(this).css("height", tabHeight);
+});
+
 });
