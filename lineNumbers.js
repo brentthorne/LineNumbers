@@ -11,9 +11,11 @@ $("p").addClass("lineNum");
 $(".figure").addClass("lineNum");
 $('table').addClass('lineNum');
 $(".sourceCode").addClass('lineNum');
+$(".mathJax").addClass("lineNum");
 
 // remove from unwanted elements
 $('p.caption').removeClass('lineNum');
+$('p.mathJax').removeClass('lineNum');
 
 // add new class to count the figures
 $(".figure").each(function(i, obj) {
@@ -34,6 +36,11 @@ $("caption").each(function(i, obj) {
 $(".sourceCode").each(function(i, obj) {
 	var sourceCodeClass = ""+ +i;
   $(this).addClass(sourceCodeClass);
+});
+
+$(".mathJax").each(function(i, obj) {
+	var mathJaxClass = ""+ +i;
+  $(this).addClass(mathJaxClass);
 });
 
 // find elements with class 'lineNum';
