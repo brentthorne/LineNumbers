@@ -124,3 +124,7 @@ caption::before {
   margin-right: auto;
   border-radius: 4px;
 }
+p.margin_DIV.sourceCode {
+  background-color: transparent;
+  padding: 0;
+}
