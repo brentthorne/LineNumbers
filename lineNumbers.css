@@ -116,3 +116,11 @@ caption::before {
   content: "Table " counter(tabcap) ". ";
   font-weight: bold;
 }
+.sourceCode {
+  background-color: lightgrey;
+  padding: 1em;
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
