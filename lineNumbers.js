@@ -10,6 +10,7 @@ $("h6").addClass("lineNum");
 $("p").addClass("lineNum");
 $(".figure").addClass("lineNum");
 $('table').addClass('lineNum');
+$(".sourceCode").addClass('lineNum');
 
 // remove from unwanted elements
 $('p.caption').removeClass('lineNum');
@@ -28,6 +29,11 @@ $("table").each(function(i, obj) {
 $("caption").each(function(i, obj) {
 	var captionClass = "caption"+ +i;
   $(this).addClass(captionClass);
+});
+
+$(".sourceCode").each(function(i, obj) {
+	var sourceCodeClass = ""+ +i;
+  $(this).addClass(sourceCodeClass);
 });
 
 // find elements with class 'lineNum';
